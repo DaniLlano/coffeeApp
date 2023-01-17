@@ -1,7 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:coffeeapp/utils/coffee_tile.dart';
+import 'package:coffeeapp/utils/coffee_type.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/src/widgets/icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +13,35 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final List coffeeType = [
+    [
+      'Latte',
+      true,
+    ],
+    [
+      'Cappucino',
+      false,
+    ],
+    [
+      'Mocca',
+      false,
+    ],
+    [
+      'Tea',
+      false,
+    ],
+  ];
+
+  void coffeTypeSelected(int index) {
+    setState(() {
+      for (int i = 0; i < coffeeType.length; i++) {
+        coffeeType[i][1] = false;
+      }
+      coffeeType[index][1] = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +104,23 @@ class _HomePageState extends State<HomePage> {
         ),
 
         SizedBox(height: 25),
+
+        Container(
+          height: 50,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: coffeeType.length,
+            itemBuilder: (context, index) => (
+              CoffeeType(
+                coffeeType: coffeeType[index][0],
+                isSelected: coffeeType[index][1],
+                onTap: () => (
+                  coffeTypeSelected(index)
+                ),
+              )  
+            ),
+          ),
+        ),
 
         Expanded(
           child: ListView(
