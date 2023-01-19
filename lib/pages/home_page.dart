@@ -16,12 +16,12 @@ class _HomePageState extends State<HomePage> {
 
   final List coffeeType = [
     [
-      'Latte',
-      true,
-    ],
-    [
       'Cappucino',
       false,
+    ],
+    [
+      'Latte',
+      true,
     ],
     [
       'Mocca',
@@ -126,7 +126,21 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              CoffeeTile(),
+              CoffeeTile(
+                coffeeImagePath: 'lib/images/latte.jpg',
+                coffeeName: 'Latte',
+                coffeePrice: '4.20',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'lib/images/latte.jpg',
+                coffeeName: 'Latte',
+                coffeePrice: '4.20',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'lib/images/latte.jpg',
+                coffeeName: 'Latte',
+                coffeePrice: '4.20',
+              ),
             ],
           ),
         ),
