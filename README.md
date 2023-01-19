@@ -1,16 +1,29 @@
-# coffeeapp
+# coffeeApp
 
-A new Flutter project.
+UI hecha con Flutter siguiendo [este video](https://www.youtube.com/watch?v=e8avvPPhyVk).
 
-## Getting Started
+Para levantar este proyecto, si o si vas a necesitar:
 
-This project is a starting point for a Flutter application.
+- [Instalar Flutter](https://esflutter.dev/docs/get-started/install) en tu compu.
+- Y la [extensión de Flutter](https://esflutter.dev/docs/get-started/editor?tab=vscode) en tu Visual Studio Code.
 
-A few resources to get you started if this is your first Flutter project:
+</br>
+</br>
+</br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Si ya tenes ambas cosas, clonate el repo seguí estos pasos:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Entrás a la carpeta
+
+```bash
+~$ cd coffeeApp/
+```
+
+E inicias el proyecto con el navegador (en este caso Google Chrome)
+
+```bash
+~$ flutter run -d chrome
+```
+</br>
+</br>
+<img src="https://user-images.githubusercontent.com/67348891/213339043-c6a25624-235c-48c7-ab68-20877e338a43.png" width="250" height="350"/>
